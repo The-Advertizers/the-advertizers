@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+@font-face {
+    font-family: lemonMilkPro;
+    src: url(./assets/Lemon\ Milk\ Pro\ Regular.otf);
+}
+
+#logo {
+    max-width: 300px;
+    height: auto;
+}
+
+.het {
+    align-self: center;
+    font-family: lemonMilkPro;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.let {
+    font-family: lemonMilkPro;
+    font-size: small;
+    align-self: center;
+    margin-top: -12px;
+}
+
+@keyframes expand {
+    0% {max-width: 300px; width: 50%;}
+    100% {max-width: 500px; width: 80%;}
+  }
+
+#divider {
+    /* width: 400px; */
+    max-width: 500px;
+    width: 80%;
+    height: 1px;
+    margin-top: 80px;
+    background-color: #FFDD00;
+    animation-name: expand;
+    animation-duration: 2s;
+}
