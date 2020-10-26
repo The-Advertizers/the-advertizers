@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/ui";
+
+@font-face {
+    font-family: 'Lemon';
+    font-weight: 200;
+    src: url(./assets/font/Lemon\ Light.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Lemon';
+    font-weight: 400;
+    src: url(./assets/font/Lemon.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Lemon';
+    font-weight: 500;
+    src: url(./assets/font/Lemon\ Mid.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'Lemon';
+    font-weight: 700;
+    src: url(./assets/font/Lemon\ Bold.otf) format("opentype");
+}
