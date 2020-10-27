@@ -10,9 +10,9 @@ module.exports = {
                 primary: '#fff',
                 secondary: '#000',
                 accent: {
-                    lighter: '#ffe74d',
+                    lighter: '#fff19a',
                     default: '#ffdd00',
-                    dark: '#e6c700'
+                    dark: '#ffaa00'
                 }
             },
             fontFamily: {
