@@ -27,6 +27,23 @@
     src: url(./assets/font/Lemon\ Bold.otf) format("opentype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.menu .active{
+  @apply text-accent;
+}
+
+.menu .active:hover,
+.menu .inactive:hover{
+  @apply text-accent-lighter;
+}
+
+.menu .inactive{
+  @apply text-gray-600;
+}
+
 .menu a {
     position: relative;
     padding-bottom: 8px;

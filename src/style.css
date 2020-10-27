@@ -22366,6 +22366,29 @@ video {
   src: url(./assets/font/Lemon\ Bold.otf) format("opentype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.menu .active{
+  --text-opacity: 1;
+  color: #ffdd00;
+  color: rgba(255, 221, 0, var(--text-opacity));
+}
+
+.menu .active:hover,
+.menu .inactive:hover{
+  --text-opacity: 1;
+  color: #fff19a;
+  color: rgba(255, 241, 154, var(--text-opacity));
+}
+
+.menu .inactive{
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+}
+
 .menu a {
   position: relative;
   padding-bottom: 8px;

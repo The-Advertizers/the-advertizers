@@ -47,21 +47,20 @@
         <div class="w-full flex-grow md:flex md:items-center md:w-auto hidden md:block pt-6 md:pt-0 menu" id="nav-content">
             <ul class="list-reset md:flex justify-end text-center flex-1 items-center">
                 <li class="mr-3">
-                    <a class="inline-block py-2 mx-4 text-lemon text-accent hover:text-accent-lighter no-underline" href="#">Home</a>
+                    <a id="menu-home" class="inline-block active text-lemon no-underline py-2 mx-4" href="#home">Home</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-gray-600 text-lemon no-underline hover:text-accent-lighter py-2 mx-4" href="#">Services</a>
+                    <a id="menu-services" class="inline-block inactive text-lemon no-underline py-2 mx-4" href="#services">Services</a>
                 </li>
                 <li class="mr-3">
-                    <a class="inline-block text-gray-600 text-lemon no-underline hover:text-accent-lighter py-2 mx-4" href="#">Contact
-                        us</a>
+                    <a id="menu-contact-us" class="inline-block inactive text-lemon no-underline py-2 mx-4" href="#contact-us">Contact us</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- LANDING SCREEN -->
-    <div class="block device-width min-h-screen bg-secondary">
+    <!-- HOME -->
+    <div id="home" class="block device-width min-h-screen bg-secondary">
 
         <!-- HEADING -->
         <div class="container pt-16 flex flex-col mx-auto min-h-screen items-center lg:items-start justify-center">
@@ -123,8 +122,9 @@
         </div>
     </div>
 
-    <div class="device-width h-screen bg-primary"></div>
-    <div class="device-width h-screen bg-primary"></div>
+    <div id="services" class="device-width h-screen bg-primary"></div>
+    <div id="contact-us" class="device-width h-screen bg-secondary"></div>
+
     <script src="main.js"></script>
 </body>
 
