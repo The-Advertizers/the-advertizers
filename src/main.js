@@ -9,7 +9,8 @@ const menus = [
     document.getElementById("menu-contact-us"), 
 ]
 
-window.addEventListener('scroll', function(e) {
+//window.addEventListener('scroll', function(e) {
+window.onscroll = function(){
     const home = document.getElementById("home");
     const services = document.getElementById("services");
     const contact = document.getElementById("contact-us");
@@ -21,7 +22,7 @@ window.addEventListener('scroll', function(e) {
     } else if (isPartiallyInViewport(contact)){
         toogleActive(menus[2]);
     }
-});
+};
 // removes scroll hash hrefs
 window.addEventListener('hashchange', function(e){
     window.history.pushState("", document.title, window.location.pathname); 
@@ -55,6 +56,7 @@ function fadeOut(element, timeout) {
         } else {
             clearInterval(fadeEffect);
             document.getElementById("preloader").remove();
+            document.getElementsByTagName( 'html' )[0].classList += "smoothscroll";
         }
     }, timeout);
 }

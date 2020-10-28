@@ -27,7 +27,7 @@
     src: url(./assets/font/Lemon\ Bold.otf) format("opentype");
 }
 
-html {
+.smoothscroll {
   scroll-behavior: smooth;
 }
 
