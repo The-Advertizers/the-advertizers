@@ -1,5 +1,9 @@
 // nav button
 document.getElementById('nav-toggle').onclick = function() {
+    toogleNav(null);
+}
+
+function toogleNav(e) {
     document.getElementById("nav-content").classList.toggle("hidden");
 }
 
@@ -9,7 +13,11 @@ const menus = [
     document.getElementById("menu-contact-us"), 
 ]
 
-document.body.addEventListener('touchmove', onScroll);
+menus.forEach(e => {
+    e.addEventListener('click', toogleNav);
+});
+
+window.addEventListener('touchmove', onScroll);
 window.addEventListener('scroll', onScroll);
 
 function onScroll(e) {
