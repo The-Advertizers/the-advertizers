@@ -7,17 +7,16 @@ function toogleNav(e) {
     document.getElementById("nav-content").classList.toggle("hidden");
 }
 
-const menus = [
+let menus = [
     document.getElementById("menu-home"),
-    document.getElementById("menu-services"), 
-    document.getElementById("menu-contact-us"), 
+    document.getElementById("menu-services"),
+    document.getElementById("menu-contact-us"),
 ]
 
 menus.forEach(e => {
     e.addEventListener('click', toogleNav);
 });
 
-window.addEventListener('touchend', onScroll);
 window.addEventListener('scroll', onScroll);
 
 function onScroll(e) {
@@ -25,23 +24,23 @@ function onScroll(e) {
     const services = document.getElementById("services");
     const contact = document.getElementById("contact-us");
 
-    if(isPartiallyInViewport(home)){
+    if (isPartiallyInViewport(home)) {
         toogleActive(menus[0]);
     } else if (isPartiallyInViewport(services)) {
-       toogleActive(menus[1]);
-    } else if (isPartiallyInViewport(contact)){
+        toogleActive(menus[1]);
+    } else if (isPartiallyInViewport(contact)) {
         toogleActive(menus[2]);
     }
 }
 
 // removes hash hrefs
-window.addEventListener('hashchange', function(e){
-    window.history.pushState("", document.title, window.location.pathname); 
+window.addEventListener('hashchange', function(e) {
+    window.history.pushState("", document.title, window.location.pathname);
 });
 
-function toogleActive(menu){
+function toogleActive(menu) {
     menus.forEach(element => {
-        if(element != menu){
+        if (element != menu) {
             element.classList.remove("active");
             element.classList.add("inactive");
         }
@@ -67,7 +66,7 @@ function fadeOut(element, timeout) {
         } else {
             clearInterval(fadeEffect);
             document.getElementById("preloader").remove();
-            document.getElementsByTagName( 'html' )[0].classList += "smoothscroll";
+            document.getElementsByTagName('html')[0].classList += "smoothscroll";
         }
     }, timeout);
 }
@@ -82,17 +81,11 @@ function fadeOut(element, timeout) {
 //     );
 // }
 
-// more than 50%
+// covers more than 50% screen (only height wise)
 function isPartiallyInViewport(element) {
     const rect = element.getBoundingClientRect();
     const mid = (window.innerHeight || document.documentElement.clientHeight) / 2;
-    //console.log(rect);
-    return (
-        rect.top < mid &&
-        rect.left >= 0 &&
-        rect.bottom > mid &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    return rect.top < mid && rect.bottom > mid;
 }
 
 // object animations
