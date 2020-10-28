@@ -9,8 +9,10 @@ const menus = [
     document.getElementById("menu-contact-us"), 
 ]
 
-//window.addEventListener('scroll', function(e) {
-window.onscroll = function(){
+document.body.addEventListener('touchmove', onScroll);
+window.addEventListener('scroll', onScroll);
+
+function onScroll(e) {
     const home = document.getElementById("home");
     const services = document.getElementById("services");
     const contact = document.getElementById("contact-us");
@@ -22,8 +24,9 @@ window.onscroll = function(){
     } else if (isPartiallyInViewport(contact)){
         toogleActive(menus[2]);
     }
-};
-// removes scroll hash hrefs
+}
+
+// removes hash hrefs
 window.addEventListener('hashchange', function(e){
     window.history.pushState("", document.title, window.location.pathname); 
 });
@@ -43,7 +46,7 @@ function toogleActive(menu){
 // preloader
 window.onload = function() {
     document.getElementsByTagName("BODY")[0].classList.add("body-default");
-    fadeOut(document.getElementById("preloader"), 50);
+    fadeOut(document.getElementById("preloader"), 100);
 }
 
 function fadeOut(element, timeout) {
@@ -83,3 +86,5 @@ function isPartiallyInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+
+// object animations

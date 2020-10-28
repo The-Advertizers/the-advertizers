@@ -22549,43 +22549,53 @@ video {
 }
 
 .animate-slideup {
-  -webkit-animation: slideup 1s ease-in-out;
-          animation: slideup 1s ease-in-out;
+  -webkit-animation: slideup 1s ease-out;
+          animation: slideup 1s ease-out;
 }
 
 .animate-slidedown {
-  -webkit-animation: slidedown 1s ease-in-out;
-          animation: slidedown 1s ease-in-out;
+  -webkit-animation: slidedown 1s ease-out;
+          animation: slidedown 1s ease-out;
 }
 
 .animate-slideleft {
-  -webkit-animation: slideleft 1s ease-in-out;
-          animation: slideleft 1s ease-in-out;
+  -webkit-animation: slideleft 1s ease-out;
+          animation: slideleft 1s ease-out;
 }
 
 .animate-slideright {
-  -webkit-animation: slideright 1s ease-in-out;
-          animation: slideright 1s ease-in-out;
+  -webkit-animation: slideright 1s ease-out;
+          animation: slideright 1s ease-out;
 }
 
 .animate-slideup_fadein {
-  -webkit-animation: slideup_fadein 1s ease-in-out;
-          animation: slideup_fadein 1s ease-in-out;
+  -webkit-animation: slideup_fadein 1s ease-out;
+          animation: slideup_fadein 1s ease-out;
 }
 
 .animate-slidedown_fadein {
-  -webkit-animation: slidedown_fadein 1s ease-in-out;
-          animation: slidedown_fadein 1s ease-in-out;
+  -webkit-animation: slidedown_fadein 1s ease-out;
+          animation: slidedown_fadein 1s ease-out;
 }
 
 .animate-slideleft_fadein {
-  -webkit-animation: slideleft_fadein 1s ease-in-out;
-          animation: slideleft_fadein 1s ease-in-out;
+  -webkit-animation: slideleft_fadein 1s ease-out;
+          animation: slideleft_fadein 1s ease-out;
 }
 
 .animate-slideright_fadein {
-  -webkit-animation: slideright_fadein 1s ease-in-out;
-          animation: slideright_fadein 1s ease-in-out;
+  -webkit-animation: slideright_fadein 1s ease-out;
+          animation: slideright_fadein 1s ease-out;
+}
+
+.animate-fadein {
+  -webkit-animation: fadein 1s ease_out;
+          animation: fadein 1s ease_out;
+}
+
+.animate-fadeout {
+  -webkit-animation: fadeout 1s ease-out;
+          animation: fadeout 1s ease-out;
 }
 
 @import "tailwindcss/ui";
@@ -44373,43 +44383,53 @@ video {
   }
 
   .sm\:animate-slideup {
-    -webkit-animation: slideup 1s ease-in-out;
-            animation: slideup 1s ease-in-out;
+    -webkit-animation: slideup 1s ease-out;
+            animation: slideup 1s ease-out;
   }
 
   .sm\:animate-slidedown {
-    -webkit-animation: slidedown 1s ease-in-out;
-            animation: slidedown 1s ease-in-out;
+    -webkit-animation: slidedown 1s ease-out;
+            animation: slidedown 1s ease-out;
   }
 
   .sm\:animate-slideleft {
-    -webkit-animation: slideleft 1s ease-in-out;
-            animation: slideleft 1s ease-in-out;
+    -webkit-animation: slideleft 1s ease-out;
+            animation: slideleft 1s ease-out;
   }
 
   .sm\:animate-slideright {
-    -webkit-animation: slideright 1s ease-in-out;
-            animation: slideright 1s ease-in-out;
+    -webkit-animation: slideright 1s ease-out;
+            animation: slideright 1s ease-out;
   }
 
   .sm\:animate-slideup_fadein {
-    -webkit-animation: slideup_fadein 1s ease-in-out;
-            animation: slideup_fadein 1s ease-in-out;
+    -webkit-animation: slideup_fadein 1s ease-out;
+            animation: slideup_fadein 1s ease-out;
   }
 
   .sm\:animate-slidedown_fadein {
-    -webkit-animation: slidedown_fadein 1s ease-in-out;
-            animation: slidedown_fadein 1s ease-in-out;
+    -webkit-animation: slidedown_fadein 1s ease-out;
+            animation: slidedown_fadein 1s ease-out;
   }
 
   .sm\:animate-slideleft_fadein {
-    -webkit-animation: slideleft_fadein 1s ease-in-out;
-            animation: slideleft_fadein 1s ease-in-out;
+    -webkit-animation: slideleft_fadein 1s ease-out;
+            animation: slideleft_fadein 1s ease-out;
   }
 
   .sm\:animate-slideright_fadein {
-    -webkit-animation: slideright_fadein 1s ease-in-out;
-            animation: slideright_fadein 1s ease-in-out;
+    -webkit-animation: slideright_fadein 1s ease-out;
+            animation: slideright_fadein 1s ease-out;
+  }
+
+  .sm\:animate-fadein {
+    -webkit-animation: fadein 1s ease_out;
+            animation: fadein 1s ease_out;
+  }
+
+  .sm\:animate-fadeout {
+    -webkit-animation: fadeout 1s ease-out;
+            animation: fadeout 1s ease-out;
   }
 }
 
@@ -66095,43 +66115,53 @@ video {
   }
 
   .md\:animate-slideup {
-    -webkit-animation: slideup 1s ease-in-out;
-            animation: slideup 1s ease-in-out;
+    -webkit-animation: slideup 1s ease-out;
+            animation: slideup 1s ease-out;
   }
 
   .md\:animate-slidedown {
-    -webkit-animation: slidedown 1s ease-in-out;
-            animation: slidedown 1s ease-in-out;
+    -webkit-animation: slidedown 1s ease-out;
+            animation: slidedown 1s ease-out;
   }
 
   .md\:animate-slideleft {
-    -webkit-animation: slideleft 1s ease-in-out;
-            animation: slideleft 1s ease-in-out;
+    -webkit-animation: slideleft 1s ease-out;
+            animation: slideleft 1s ease-out;
   }
 
   .md\:animate-slideright {
-    -webkit-animation: slideright 1s ease-in-out;
-            animation: slideright 1s ease-in-out;
+    -webkit-animation: slideright 1s ease-out;
+            animation: slideright 1s ease-out;
   }
 
   .md\:animate-slideup_fadein {
-    -webkit-animation: slideup_fadein 1s ease-in-out;
-            animation: slideup_fadein 1s ease-in-out;
+    -webkit-animation: slideup_fadein 1s ease-out;
+            animation: slideup_fadein 1s ease-out;
   }
 
   .md\:animate-slidedown_fadein {
-    -webkit-animation: slidedown_fadein 1s ease-in-out;
-            animation: slidedown_fadein 1s ease-in-out;
+    -webkit-animation: slidedown_fadein 1s ease-out;
+            animation: slidedown_fadein 1s ease-out;
   }
 
   .md\:animate-slideleft_fadein {
-    -webkit-animation: slideleft_fadein 1s ease-in-out;
-            animation: slideleft_fadein 1s ease-in-out;
+    -webkit-animation: slideleft_fadein 1s ease-out;
+            animation: slideleft_fadein 1s ease-out;
   }
 
   .md\:animate-slideright_fadein {
-    -webkit-animation: slideright_fadein 1s ease-in-out;
-            animation: slideright_fadein 1s ease-in-out;
+    -webkit-animation: slideright_fadein 1s ease-out;
+            animation: slideright_fadein 1s ease-out;
+  }
+
+  .md\:animate-fadein {
+    -webkit-animation: fadein 1s ease_out;
+            animation: fadein 1s ease_out;
+  }
+
+  .md\:animate-fadeout {
+    -webkit-animation: fadeout 1s ease-out;
+            animation: fadeout 1s ease-out;
   }
 }
 
@@ -87817,43 +87847,53 @@ video {
   }
 
   .lg\:animate-slideup {
-    -webkit-animation: slideup 1s ease-in-out;
-            animation: slideup 1s ease-in-out;
+    -webkit-animation: slideup 1s ease-out;
+            animation: slideup 1s ease-out;
   }
 
   .lg\:animate-slidedown {
-    -webkit-animation: slidedown 1s ease-in-out;
-            animation: slidedown 1s ease-in-out;
+    -webkit-animation: slidedown 1s ease-out;
+            animation: slidedown 1s ease-out;
   }
 
   .lg\:animate-slideleft {
-    -webkit-animation: slideleft 1s ease-in-out;
-            animation: slideleft 1s ease-in-out;
+    -webkit-animation: slideleft 1s ease-out;
+            animation: slideleft 1s ease-out;
   }
 
   .lg\:animate-slideright {
-    -webkit-animation: slideright 1s ease-in-out;
-            animation: slideright 1s ease-in-out;
+    -webkit-animation: slideright 1s ease-out;
+            animation: slideright 1s ease-out;
   }
 
   .lg\:animate-slideup_fadein {
-    -webkit-animation: slideup_fadein 1s ease-in-out;
-            animation: slideup_fadein 1s ease-in-out;
+    -webkit-animation: slideup_fadein 1s ease-out;
+            animation: slideup_fadein 1s ease-out;
   }
 
   .lg\:animate-slidedown_fadein {
-    -webkit-animation: slidedown_fadein 1s ease-in-out;
-            animation: slidedown_fadein 1s ease-in-out;
+    -webkit-animation: slidedown_fadein 1s ease-out;
+            animation: slidedown_fadein 1s ease-out;
   }
 
   .lg\:animate-slideleft_fadein {
-    -webkit-animation: slideleft_fadein 1s ease-in-out;
-            animation: slideleft_fadein 1s ease-in-out;
+    -webkit-animation: slideleft_fadein 1s ease-out;
+            animation: slideleft_fadein 1s ease-out;
   }
 
   .lg\:animate-slideright_fadein {
-    -webkit-animation: slideright_fadein 1s ease-in-out;
-            animation: slideright_fadein 1s ease-in-out;
+    -webkit-animation: slideright_fadein 1s ease-out;
+            animation: slideright_fadein 1s ease-out;
+  }
+
+  .lg\:animate-fadein {
+    -webkit-animation: fadein 1s ease_out;
+            animation: fadein 1s ease_out;
+  }
+
+  .lg\:animate-fadeout {
+    -webkit-animation: fadeout 1s ease-out;
+            animation: fadeout 1s ease-out;
   }
 }
 
@@ -109539,42 +109579,52 @@ video {
   }
 
   .xl\:animate-slideup {
-    -webkit-animation: slideup 1s ease-in-out;
-            animation: slideup 1s ease-in-out;
+    -webkit-animation: slideup 1s ease-out;
+            animation: slideup 1s ease-out;
   }
 
   .xl\:animate-slidedown {
-    -webkit-animation: slidedown 1s ease-in-out;
-            animation: slidedown 1s ease-in-out;
+    -webkit-animation: slidedown 1s ease-out;
+            animation: slidedown 1s ease-out;
   }
 
   .xl\:animate-slideleft {
-    -webkit-animation: slideleft 1s ease-in-out;
-            animation: slideleft 1s ease-in-out;
+    -webkit-animation: slideleft 1s ease-out;
+            animation: slideleft 1s ease-out;
   }
 
   .xl\:animate-slideright {
-    -webkit-animation: slideright 1s ease-in-out;
-            animation: slideright 1s ease-in-out;
+    -webkit-animation: slideright 1s ease-out;
+            animation: slideright 1s ease-out;
   }
 
   .xl\:animate-slideup_fadein {
-    -webkit-animation: slideup_fadein 1s ease-in-out;
-            animation: slideup_fadein 1s ease-in-out;
+    -webkit-animation: slideup_fadein 1s ease-out;
+            animation: slideup_fadein 1s ease-out;
   }
 
   .xl\:animate-slidedown_fadein {
-    -webkit-animation: slidedown_fadein 1s ease-in-out;
-            animation: slidedown_fadein 1s ease-in-out;
+    -webkit-animation: slidedown_fadein 1s ease-out;
+            animation: slidedown_fadein 1s ease-out;
   }
 
   .xl\:animate-slideleft_fadein {
-    -webkit-animation: slideleft_fadein 1s ease-in-out;
-            animation: slideleft_fadein 1s ease-in-out;
+    -webkit-animation: slideleft_fadein 1s ease-out;
+            animation: slideleft_fadein 1s ease-out;
   }
 
   .xl\:animate-slideright_fadein {
-    -webkit-animation: slideright_fadein 1s ease-in-out;
-            animation: slideright_fadein 1s ease-in-out;
+    -webkit-animation: slideright_fadein 1s ease-out;
+            animation: slideright_fadein 1s ease-out;
+  }
+
+  .xl\:animate-fadein {
+    -webkit-animation: fadein 1s ease_out;
+            animation: fadein 1s ease_out;
+  }
+
+  .xl\:animate-fadeout {
+    -webkit-animation: fadeout 1s ease-out;
+            animation: fadeout 1s ease-out;
   }
 }
