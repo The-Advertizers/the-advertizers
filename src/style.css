@@ -22589,8 +22589,8 @@ video {
 }
 
 .animate-fadein {
-  -webkit-animation: fadein 1s ease_out;
-          animation: fadein 1s ease_out;
+  -webkit-animation: fadein 1s ease-out;
+          animation: fadein 1s ease-out;
 }
 
 .animate-fadeout {
@@ -44423,8 +44423,8 @@ video {
   }
 
   .sm\:animate-fadein {
-    -webkit-animation: fadein 1s ease_out;
-            animation: fadein 1s ease_out;
+    -webkit-animation: fadein 1s ease-out;
+            animation: fadein 1s ease-out;
   }
 
   .sm\:animate-fadeout {
@@ -66155,8 +66155,8 @@ video {
   }
 
   .md\:animate-fadein {
-    -webkit-animation: fadein 1s ease_out;
-            animation: fadein 1s ease_out;
+    -webkit-animation: fadein 1s ease-out;
+            animation: fadein 1s ease-out;
   }
 
   .md\:animate-fadeout {
@@ -87887,8 +87887,8 @@ video {
   }
 
   .lg\:animate-fadein {
-    -webkit-animation: fadein 1s ease_out;
-            animation: fadein 1s ease_out;
+    -webkit-animation: fadein 1s ease-out;
+            animation: fadein 1s ease-out;
   }
 
   .lg\:animate-fadeout {
@@ -109619,8 +109619,8 @@ video {
   }
 
   .xl\:animate-fadein {
-    -webkit-animation: fadein 1s ease_out;
-            animation: fadein 1s ease_out;
+    -webkit-animation: fadein 1s ease-out;
+            animation: fadein 1s ease-out;
   }
 
   .xl\:animate-fadeout {

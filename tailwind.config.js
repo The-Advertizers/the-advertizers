@@ -69,7 +69,7 @@ module.exports = {
                 slidedown_fadein: 'slidedown_fadein 1s ease-out', 
                 slideleft_fadein: 'slideleft_fadein 1s ease-out', 
                 slideright_fadein: 'slideright_fadein 1s ease-out', 
-                fadein: 'fadein 1s ease_out',
+                fadein: 'fadein 1s ease-out',
                 fadeout: 'fadeout 1s ease-out',
             },
         },

@@ -17,7 +17,7 @@ menus.forEach(e => {
     e.addEventListener('click', toogleNav);
 });
 
-window.addEventListener('touchmove', onScroll);
+window.addEventListener('touchend', onScroll);
 window.addEventListener('scroll', onScroll);
 
 function onScroll(e) {
