@@ -22636,20 +22636,20 @@ video {
   scroll-behavior: smooth;
 }
 
-.menu .active{
+.menu .active {
   --text-opacity: 1;
   color: #ffdd00;
   color: rgba(255, 221, 0, var(--text-opacity));
 }
 
 .menu .active:hover,
-.menu .inactive:hover{
+.menu .inactive:hover {
   --text-opacity: 1;
   color: #fff19a;
   color: rgba(255, 241, 154, var(--text-opacity));
 }
 
-.menu .inactive{
+.menu .inactive {
   --text-opacity: 1;
   color: #718096;
   color: rgba(113, 128, 150, var(--text-opacity));
@@ -22661,7 +22661,7 @@ video {
 }
 
 .menu a:before,
-  .menu a:after {
+.menu a:after {
   content: '';
   position: absolute;
   bottom: 2px;
@@ -22684,20 +22684,20 @@ video {
 }
 
 .menu a:hover:before,
-  .menu a:hover:after,
-  .menu a:focus:before,
-  .menu a:focus:after {
+.menu a:hover:after,
+.menu a:focus:before,
+.menu a:focus:after {
   opacity: 1;
   transform: translateY(0);
 }
 
 .menu a:hover:before,
-  .menu a:focus:before {
+.menu a:focus:before {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
 }
 
 .menu a:hover:after,
- .menu a:focus:after {
+.menu a:focus:after {
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 }
 

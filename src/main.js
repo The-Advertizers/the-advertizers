@@ -20,6 +20,8 @@ menus.forEach(e => {
 window.addEventListener('scroll', onScroll);
 
 function onScroll(e) {
+    objRevealScroll();
+
     const home = document.getElementById("home");
     const services = document.getElementById("services");
     const contact = document.getElementById("contact-us");
@@ -53,7 +55,7 @@ function toogleActive(menu) {
 // preloader
 window.onload = function() {
     document.getElementsByTagName("BODY")[0].classList.add("body-default");
-    fadeOut(document.getElementById("preloader"), 100);
+    fadeOut(document.getElementById("preloader"), 50);
 }
 
 function fadeOut(element, timeout) {
@@ -71,15 +73,10 @@ function fadeOut(element, timeout) {
     }, timeout);
 }
 
-// function isInViewport(element) {
-//     const rect = element.getBoundingClientRect();
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+}
 
 // covers more than 50% screen (only height wise)
 function isPartiallyInViewport(element) {
@@ -89,3 +86,70 @@ function isPartiallyInViewport(element) {
 }
 
 // object animations
+const slideupobjs = [
+    ...document.getElementsByClassName("slide-up")
+];
+
+const slidedownobjs = [
+    ...document.getElementsByClassName("slide-down")
+];
+
+const slideleftobjs = [
+    ...document.getElementsByClassName("slide-left")
+];
+
+const sliderightobjs = [
+    ...document.getElementsByClassName("slide-right")
+];
+
+const fadeinobjs = [
+    ...document.getElementsByClassName("fade-in")
+];
+
+[
+    ...slideupobjs,
+    ...slidedownobjs,
+    ...slideleftobjs,
+    ...sliderightobjs,
+    ...fadeinobjs
+].forEach(element => {
+    element.classList.add("opacity-0");
+    element.classList.remove("animate-slideup_fadein");
+    element.classList.remove("animate-slidedown_fadein");
+    element.classList.remove("animate-slideleft_fadein");
+    element.classList.remove("animate-slideright_fadein");
+    element.classList.remove("animate-fadein");
+});
+
+function objRevealScroll() {
+    slideupobjs.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.remove("opacity-0");
+            element.classList.add("animate-slideup_fadein");
+        }
+    });
+    slidedownobjs.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.remove("opacity-0");
+            element.classList.add("animate-slidedown_fadein");
+        }
+    });
+    slideleftobjs.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.remove("opacity-0");
+            element.classList.add("animate-slideleft_fadein");
+        }
+    });
+    sliderightobjs.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.remove("opacity-0");
+            element.classList.add("animate-slideright_fadein");
+        }
+    });
+    fadeinobjs.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.remove("opacity-0");
+            element.classList.add("animate-fadein");
+        }
+    });
+}

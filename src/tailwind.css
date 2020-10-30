@@ -28,28 +28,29 @@
 }
 
 .smoothscroll {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-.menu .active{
-  @apply text-accent;
+.menu .active {
+    @apply text-accent;
 }
 
 .menu .active:hover,
-.menu .inactive:hover{
-  @apply text-accent-lighter;
+.menu .inactive:hover {
+    @apply text-accent-lighter;
 }
 
-.menu .inactive{
-  @apply text-gray-600;
+.menu .inactive {
+    @apply text-gray-600;
 }
 
 .menu a {
     position: relative;
     padding-bottom: 8px;
-  }
-  .menu a:before,
-  .menu a:after {
+}
+
+.menu a:before,
+.menu a:after {
     content: '';
     position: absolute;
     bottom: 2px;
@@ -57,44 +58,49 @@
     right: 0;
     height: 2px;
     background-color: #ffdd00;
-  }
-  .menu a:before {
+}
+
+.menu a:before {
     opacity: 0;
     -webkit-transform: translateY(-8px);
-            transform: translateY(-8px);
+    transform: translateY(-8px);
     -webkit-transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
     transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  .menu a:after {
+}
+
+.menu a:after {
     opacity: 0;
     -webkit-transform: translateY(4px);
-            transform: translateY(4px);
+    transform: translateY(4px);
     -webkit-transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  .menu a:hover:before,
-  .menu a:hover:after,
-  .menu a:focus:before,
-  .menu a:focus:after {
+}
+
+.menu a:hover:before,
+.menu a:hover:after,
+.menu a:focus:before,
+.menu a:focus:after {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .menu a:hover:before,
-  .menu a:focus:before {
+    transform: translateY(0);
+}
+
+.menu a:hover:before,
+.menu a:focus:before {
     -webkit-transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
- .menu a:hover:after,
- .menu a:focus:after {
+}
+
+.menu a:hover:after,
+.menu a:focus:after {
     -webkit-transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
     transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+}

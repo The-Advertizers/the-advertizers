@@ -28,16 +28,15 @@
     </div>
 
     <!-- NAVIGATION  -->
-    <nav id="nav" class="flex items-center justify-between flex-wrap p-4 bg-secondary fixed w-full z-10 top-0">
+    <nav id="nav" class="flex items-center justify-between flex-wrap p-4 bg-secondary fixed w-full z-50 top-0">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <a href="#">
+            <a href="#home">
                 <img id="nav-logo" class="w-auto h-10" src="./assets/img/logo-white.png" />
             </a>
         </div>
 
         <div class="block md:hidden">
-            <button id="nav-toggle" 
-            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
                 <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -48,16 +47,13 @@
         <div class="w-full flex-grow md:flex md:items-center md:w-auto hidden md:block pt-6 md:pt-0 menu" id="nav-content">
             <ul class="list-reset md:flex justify-end text-center flex-1 items-center">
                 <li class="mr-3">
-                    <a id="menu-home" class="inline-block active text-lemon no-underline py-2 mx-4"
-                     style="animation: slidedown_fadein ease-out 1s;" href="#home">Home</a>
+                    <a id="menu-home" class="inline-block active font-lemon no-underline py-2 mx-4" style="animation: slidedown_fadein ease-out 1s;" href="#home">Home</a>
                 </li>
                 <li class="mr-3">
-                    <a id="menu-services" class="inline-block inactive text-lemon no-underline py-2 mx-4" 
-                    style="animation: slidedown_fadein ease-out 800ms;" href="#services">Services</a>
+                    <a id="menu-services" class="inline-block inactive font-lemon no-underline py-2 mx-4" style="animation: slidedown_fadein ease-out 800ms;" href="#services">Services</a>
                 </li>
                 <li class="mr-3">
-                    <a id="menu-contact-us" class="inline-block inactive text-lemon no-underline py-2 mx-4" 
-                    style="animation: slidedown_fadein ease-out 600ms;" href="#contact-us">Contact us</a>
+                    <a id="menu-contact-us" class="inline-block inactive font-lemon no-underline py-2 mx-4" style="animation: slidedown_fadein ease-out 600ms;" href="#contact-us">Contact us</a>
                 </li>
             </ul>
             <div class="md:hidden mt-4 mx-auto w-auto max-w-sm h-px bg-primary animate-fadein"></div>
@@ -80,11 +76,9 @@
                         officiis eaque doloribus molestias possimus nostrum deserunt minima distinctio odit.</p>
 
                 </div>
-                <svg class="h-auto w-1/2 lg:w-2/3 hidden sm:block pb-16 animate-slideup_fadein lg:animate-slideright_fadein" 
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 798.68127 647.00861">
+                <svg class="h-auto w-1/2 lg:w-2/3 hidden sm:block pb-16 animate-slideup_fadein lg:animate-slideright_fadein" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 798.68127 647.00861">
                     <title>Growth</title>
-                    <polygon class="fill-current text-white" 
-                    points="126.832 0 74.02 103.009 84.681 103.009 84.681 187.009 30.953 187.009 0 247.381 383.53 444.017 510.363 196.636 126.832 0" />
+                    <polygon class="fill-current text-white" points="126.832 0 74.02 103.009 84.681 103.009 84.681 187.009 30.953 187.009 0 247.381 383.53 444.017 510.363 196.636 126.832 0" />
                     <rect x="115.68127" y="67.00861" width="588" height="295" class="fill-current text-accent-lighter" />
                     <rect x="198.18127" y="173.00861" width="434" height="1" class="fill-current text-secondary" opacity="0.5" />
                     <rect x="198.68127" y="198.00861" width="434" height="1" class="fill-current text-secondary" opacity="0.5" />
@@ -96,8 +90,7 @@
                     214.782 452.062 181.824 513.076 222.833 608.837 168.364 609.825 170.102 512.988 225.184 452.002 184.193 396.931 217.235 
                     377.124 200.399 331.175 251.343 274.121 210.305 210.722 270.733" class="fill-current text-secondary" />
                     <path d="M597.416,722.34221c4.7,17.37388,20.79838,28.134,20.79838,28.134s8.47828-17.40854,
-                    3.77832-34.78241-20.79838-28.134-20.79838-28.134S592.716,704.96833,597.416,722.34221Z" 
-                    transform="translate(-200.65936 -126.4957)" class="fill-current text-white" />
+                    3.77832-34.78241-20.79838-28.134-20.79838-28.134S592.716,704.96833,597.416,722.34221Z" transform="translate(-200.65936 -126.4957)" class="fill-current text-white" />
                     <path d="M604.32226,718.60838c12.89676,12.55447,14.472,31.85362,14.472,31.85362s-19.33453-1.05567-32.23129-13.61015-14.472-31.85362-14.472-31.85362S591.42551,
                     706.0539,604.32226,718.60838Z" transform="translate(-200.65936 -126.4957)" class="fill-current text-accent" />
                     <circle cx="765.18127" cy="53.50861" r="33.5" class="fill-current text-accent" opacity="0.4" />
@@ -111,19 +104,16 @@
                     3.6735-121.2256-1.2245-83.26607-6.12251-85.71507S724.37318,535.47006,724.37318,535.47006Z" transform="translate(-200.65936 -126.4957)" fill="#2f2e41" />
                     <path d="M734.16919,739.96173s-11.02051-1.2245-13.46952,0-6.1225,9.796,0,14.694,22.041,12.245,26.939,12.245a25.33121,25.33121,0,0,0,
                     9.796-2.449l-2.449-20.81651Z" transform="translate(-200.65936 -126.4957)" fill="#2f2e41" />
-                    <path d="M783.14923,746.08424l1.2245,17.143s15.91851,2.449,17.143,0,13.46951-8.57151,14.694-9.796,2.449-14.694-4.898-15.91851-9.796,2.449-9.796,2.449Z"
-                     transform="translate(-200.65936 -126.4957)" fill="#2f2e41" />
+                    <path d="M783.14923,746.08424l1.2245,17.143s15.91851,2.449,17.143,0,13.46951-8.57151,14.694-9.796,2.449-14.694-4.898-15.91851-9.796,2.449-9.796,2.449Z" transform="translate(-200.65936 -126.4957)" fill="#2f2e41" />
                     <path d="M680.29114,432.612s-29.388,28.16352-25.71452,42.85753S687.63815,533.021,687.63815,533.021s28.16352,14.694,
                     31.837,0-19.592-11.02051-19.592-11.02051l-18.36752-44.082,20.81652-29.388Z" transform="translate(-200.65936 -126.4957)" fill="#ffb8b8" />
                     <path d="M811.60481,389.76471s26.7713-17.2156,26.15173-29.04306-16.75849-49.11979-16.75849-49.11979-12.62537-26.24931-17.64456-15.52176,
                     6.59679,22.14672,6.59679,22.14672l7.49747,36.58227-20.37608,19.43862Z" transform="translate(-200.65936 -126.4957)" fill="#ffb8b8" />
                     <circle cx="544.53033" cy="216.72769" r="22.04102" fill="#ffb8b8" />
-                    <path d="M734.16919,356.6929l3.6735,23.26552,26.939-4.898s-1.2245-23.26552-1.2245-25.71452S734.16919,356.6929,734.16919,356.6929Z" 
-                    transform="translate(-200.65936 -126.4957)" fill="#ffb8b8" />
+                    <path d="M734.16919,356.6929l3.6735,23.26552,26.939-4.898s-1.2245-23.26552-1.2245-25.71452S734.16919,356.6929,734.16919,356.6929Z" transform="translate(-200.65936 -126.4957)" fill="#ffb8b8" />
                     <path d="M732.94468,379.95842s30.61253-7.347,34.286-4.898,22.041,4.898,22.041,4.898l20.81652,31.837-6.1225,40.40853s-1.22451,64.89856,
                     1.2245,75.91907,15.91851,12.245-12.245,14.694-33.06153-1.2245-52.65355,3.67351-35.51053-2.449-30.61253-7.347,
-                    13.46952-83.26607,3.67351-90.61308-13.46951-45.30654-13.46951-45.30654S732.94468,386.08093,732.94468,379.95842Z" 
-                    transform="translate(-200.65936 -126.4957)" fill="#d0cde1" />
+                    13.46952-83.26607,3.67351-90.61308-13.46951-45.30654-13.46951-45.30654S732.94468,386.08093,732.94468,379.95842Z" transform="translate(-200.65936 -126.4957)" fill="#d0cde1" />
                     <path d="M785.59823,383.63192l3.6735-3.6735,7.347-7.347s23.87777,10.40825,22.65327,14.08176-9.18376,25.10227-9.18376,25.10227l-11.02051,
                     3.6735Z" transform="translate(-200.65936 -126.4957)" fill="#d0cde1" />
                     <path d="M714.57717,405.67294l-14.694-2.449s-11.02051,12.245-14.694,17.143-11.02051,17.143-11.02051,17.143l25.71453,18.36752,
@@ -155,8 +145,21 @@
         </div>
     </div>
 
-    <div id="services" class="device-width h-screen bg-primary"></div>
-    <div id="contact-us" class="device-width h-screen bg-secondary"></div>
+    <div id="services" class="device-width min-h-screen bg-primary">
+        <div class="pt-20"></div>
+        <div class="relative slide-down pt-16">
+            <h1 class="w-full absolute top-0 bottom-0 z-0 mx-auto text-4xl sm:text-5xl text-accent font-lemon font-medium text-center">Our Services</h1>
+            <h1 class="w-full absolute top-0 bottom-0 z-10 mx-auto text-4xl sm:text-5xl text-secondary font-lemon font-normal text-center">Our Services</h1>
+        </div>
+    </div>
+
+    <div id="contact-us" class="device-width min-h-screen bg-secondary">
+        <div class="pt-20"></div>
+        <div class="relative slide-down pt-16">
+            <h1 class="w-full absolute top-0 bottom-0 z-0 mx-auto text-4xl sm:text-5xl text-accent font-lemon font-medium text-center">Contact us</h1>
+            <h1 class="w-full absolute top-0 bottom-0 z-10 mx-auto text-4xl sm:text-5xl text-primary font-lemon font-normal text-center">Contact us</h1>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
