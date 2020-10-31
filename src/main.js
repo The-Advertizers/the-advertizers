@@ -153,3 +153,16 @@ function objRevealScroll() {
         }
     });
 }
+
+// contact us
+const cnbdy = document.getElementById("cu-body");
+const cnsub = document.getElementById("cu-subj");
+const cnbtn = document.getElementById("cu-send");
+
+cnbtn.addEventListener('click', (e) => {
+    window.open(encodeURI(
+        'mailto:admin@theadvertizers.com?cc=\'\'&subject=' 
+        + ((cnsub.value == "")? cnsub.placeholder : cnsub.value) 
+        + '&body=' + cnbdy.value
+    ));
+});

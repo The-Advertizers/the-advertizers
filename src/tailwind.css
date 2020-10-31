@@ -31,6 +31,22 @@
     scroll-behavior: smooth;
 }
 
+.button-accent {
+    @apply bg-accent text-black font-lemon px-4 py-2 rounded-md;
+}
+
+.button-accent:hover {
+    @apply bg-accent-lighter text-black font-lemon px-4 py-2 rounded-md;
+}
+
+.form-input{
+    @apply bg-gray-300 py-1 px-2 mx-1 my-2 w-full rounded-md;
+}
+
+.form-input:focus{
+    @apply bg-primary py-1 px-2 mx-1 my-2 w-full rounded-md;
+}
+
 .menu .active {
     @apply text-accent;
 }
