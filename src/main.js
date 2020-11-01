@@ -11,6 +11,7 @@ let menus = [
     document.getElementById("menu-home"),
     document.getElementById("menu-services"),
     document.getElementById("menu-contact-us"),
+    document.getElementById("menu-portfolio"),
 ]
 
 menus.forEach(e => {
@@ -21,10 +22,12 @@ window.addEventListener('scroll', onScroll);
 
 function onScroll(e) {
     objRevealScroll();
+    shadowScroll();
 
     const home = document.getElementById("home");
     const services = document.getElementById("services");
     const contact = document.getElementById("contact-us");
+    const portfolio = document.getElementById("portfolio");
 
     if (isPartiallyInViewport(home)) {
         toogleActive(menus[0]);
@@ -32,6 +35,8 @@ function onScroll(e) {
         toogleActive(menus[1]);
     } else if (isPartiallyInViewport(contact)) {
         toogleActive(menus[2]);
+    } else if (isPartiallyInViewport(portfolio)) {
+        toogleActive(menus[3]);
     }
 }
 
@@ -75,7 +80,7 @@ function fadeOut(element, timeout) {
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    return rect.bottom <= ((window.innerHeight || document.documentElement.clientHeight) + 30);
 }
 
 // covers more than 50% screen (only height wise)
@@ -161,8 +166,64 @@ const cnbtn = document.getElementById("cu-send");
 
 cnbtn.addEventListener('click', (e) => {
     window.open(encodeURI(
-        'mailto:admin@theadvertizers.com?cc=\'\'&subject=' 
-        + ((cnsub.value == "")? cnsub.placeholder : cnsub.value) 
-        + '&body=' + cnbdy.value
+        'mailto:info@theadvertizers.com?subject=' +
+        ((cnsub.value == "") ? cnsub.placeholder : cnsub.value) +
+        '&body=' + cnbdy.value
     ));
 });
+
+//shadow scroll animator
+const shadowElements = [
+    ...document.getElementsByClassName("scrolling-shadow")
+]
+
+const textShadow = [
+    ...document.getElementsByClassName("scrolling-shadow-text")
+]
+
+const hoffsetout = 150;
+const hoffsetin = 150;
+const navh = 72;
+
+textShadow.forEach(e => {
+    const r = e.getBoundingClientRect();
+    e.style.textShadow =
+        "0px " +
+        hoffsetout * ((r.top >= (window.innerHeight || document.documentElement.clientHeight)) ? 1 : -1) +
+        "px 6px rgba(0, 0, 0, 0.15)";
+});
+
+shadowElements.forEach(e => {
+    const r = e.getBoundingClientRect();
+    e.style.boxShadow =
+        "inset 0px " +
+        hoffsetin * ((r.top >= (window.innerHeight || document.documentElement.clientHeight)) ? 1 : -1) +
+        "px 12px 6px rgba(0, 0, 0, 0.15)";
+});
+
+function shadowScroll() {
+    shadowElements.forEach(e => {
+        const r = e.getBoundingClientRect();
+        var winp = (window.innerHeight || document.documentElement.clientHeight);
+        var winh = window.screen.availHeight - navh;
+        var midw = winh / 2;
+        var mide = (r.bottom + r.top) / 2;
+        if (mide <= winp - navh && mide >= (winp - winh)) {
+            var offset = (-((Math.abs(mide - winp) / (midw)) - 1));
+            e.style.boxShadow =
+                "inset 0px " + offset * hoffsetin + "px 12px 6px rgba(0, 0, 0, 0.15)";
+        }
+    });
+    textShadow.forEach(e => {
+        const r = e.getBoundingClientRect();
+        var winp = (window.innerHeight || document.documentElement.clientHeight);
+        var winh = window.screen.availHeight - navh;
+        var midw = winh / 2;
+        var mide = (r.bottom + r.top) / 2;
+        if (mide <= winp - navh && mide >= (winp - winh)) {
+            var offset = (-((Math.abs(mide - winp) / (midw)) - 1));
+            e.style.textShadow =
+                "0px " + offset * hoffsetout + "px 6px rgba(0, 0, 0, 0.15)";
+        }
+    });
+}
