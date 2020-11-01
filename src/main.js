@@ -80,7 +80,7 @@ function fadeOut(element, timeout) {
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
-    return rect.bottom <= ((window.innerHeight || document.documentElement.clientHeight) + 30);
+    return rect.bottom <= ((window.innerHeight || document.documentElement.clientHeight) + window.screen.availHeight / 6);
 }
 
 // covers more than 50% screen (only height wise)
