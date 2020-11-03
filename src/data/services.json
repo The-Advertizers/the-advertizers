@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Social Media Marketing",
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est odit quas quae recusandae, quo repudiandae totam incidunt voluptas ducimus dolorem nam molestiae assumenda laudantium voluptatem, et natus ad accusamus.",
+        "icon": "speaker.svg"
+    },
+    {
+        "title": "Search Engine Marketing",
+        "icon": "search.svg",
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est odit quas quae recusandae, quo repudiandae totam incidunt voluptas ducimus dolorem nam molestiae assumenda laudantium voluptatem, et natus ad accusamus."
+    },
+    {
+        "title": "Cinematography",
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est odit quas quae recusandae, quo repudiandae totam incidunt voluptas ducimus dolorem nam molestiae assumenda laudantium voluptatem, et natus ad accusamus.",
+        "icon": "film.svg"
+    },
+    {
+        "title": "Content Writing",
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est odit quas quae recusandae, quo repudiandae totam incidunt voluptas ducimus dolorem nam molestiae assumenda laudantium voluptatem, et natus ad accusamus.",
+        "icon": "pencil.svg"
+    },
+    {
+        "title": "Videography",
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est odit quas quae recusandae, quo repudiandae totam incidunt voluptas ducimus dolorem nam molestiae assumenda laudantium voluptatem, et natus ad accusamus.",
+        "icon": "videocamera.svg"
+    },
+    {
+        "title": "Product Photography",
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est odit quas quae recusandae, quo repudiandae totam incidunt voluptas ducimus dolorem nam molestiae assumenda laudantium voluptatem, et natus ad accusamus.",
+        "icon": "product.svg"
+    },
+    {
+        "title": "Graphic Design",
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta est odit quas quae recusandae, quo repudiandae totam incidunt voluptas ducimus dolorem nam molestiae assumenda laudantium voluptatem, et natus ad accusamus.",
+        "icon": "computer.svg"
+    }
+]

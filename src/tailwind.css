@@ -27,6 +27,17 @@
     src: url(./assets/font/Lemon\ Bold.otf) format("opentype");
 }
 
+.noScrollBar::-webkit-scrollbar {
+    display: none;
+}
+
+.noScrollBar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
 .smoothscroll {
     scroll-behavior: smooth;
 }
@@ -48,11 +59,11 @@
 }
 
 .card {
-    @apply bg-primary transition-shadow duration-100 shadow-lg rounded-md;
+    @apply transition-shadow duration-100 shadow-lg rounded-md;
 }
 
 .card:hover {
-    @apply bg-primary transition-shadow duration-100 shadow-2xl rounded-md;
+    @apply transition-shadow duration-100 shadow-2xl rounded-md;
 }
 
 .bg-header-portfolio {
