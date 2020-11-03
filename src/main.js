@@ -54,8 +54,11 @@ function toogleActive(menu) {
 
 // preloader
 window.onload = function () {
-    document.getElementsByTagName("BODY")[0].classList.add("body-default");
-    fadeOut(document.getElementById("preloader"), 50);
+    loadDynamicContent(()=>{
+        initiateAnimator();
+        document.getElementsByTagName("BODY")[0].classList.add("body-default");
+        fadeOut(document.getElementById("preloader"), 50);
+    });
 }
 
 function fadeOut(element, timeout) {
@@ -98,10 +101,8 @@ cnbtn.addEventListener('click', (e) => {
     ));
 });
 
-loadDynamicContent();
-
 // Dynamic content
-function loadDynamicContent() {
+function loadDynamicContent(onCompleteListener) {
     function addService(service) {
         /* <div class="card flex flex-col items-center w-64 max-h-16 p-4 slide-up my-6 mx-4"> */
         const card = document.createElement("DIV");
@@ -153,7 +154,7 @@ function loadDynamicContent() {
         data.forEach(service => { addService(service) });
         readJSON("./data/portfolio.json", (data) => {
             addPortfolio(data);
-            initiateAnimator();
+            onCompleteListener();
         });
     });
 }
