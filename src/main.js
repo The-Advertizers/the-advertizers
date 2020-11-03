@@ -1,5 +1,5 @@
 // nav button
-document.getElementById('nav-toggle').onclick = function () {
+document.getElementById('nav-toggle').onclick = function() {
     toogleNav(null);
 }
 
@@ -17,6 +17,10 @@ let menus = [
 menus.forEach(e => {
     e.addEventListener('click', toogleNav);
 });
+
+function scrollToServices() {
+    services.scrollIntoView();
+}
 
 window.addEventListener('scroll', () => {
     const home = document.getElementById("home");
@@ -36,7 +40,7 @@ window.addEventListener('scroll', () => {
 });
 
 // removes hash hrefs
-window.addEventListener('hashchange', function (e) {
+window.addEventListener('hashchange', function(e) {
     window.history.pushState("", document.title, window.location.pathname);
 });
 
@@ -53,8 +57,8 @@ function toogleActive(menu) {
 
 
 // preloader
-window.onload = function () {
-    loadDynamicContent(()=>{
+window.onload = function() {
+    loadDynamicContent(() => {
         initiateAnimator();
         document.getElementsByTagName("BODY")[0].classList.add("body-default");
         fadeOut(document.getElementById("preloader"), 50);
@@ -62,7 +66,7 @@ window.onload = function () {
 }
 
 function fadeOut(element, timeout) {
-    var fadeEffect = setInterval(function () {
+    var fadeEffect = setInterval(function() {
         if (!element.style.opacity) {
             element.style.opacity = 1;
         }
@@ -112,7 +116,7 @@ function loadDynamicContent(onCompleteListener) {
         const icon = document.createElement("DIV");
         icon.classList = "h-12 w-12 text-accent mb-4";
         let svg = getIconElement(service.icon);
-        if(svg != null)
+        if (svg != null)
             icon.appendChild(svg);
         card.appendChild(icon);
 
@@ -151,7 +155,9 @@ function loadDynamicContent(onCompleteListener) {
     }
 
     readJSON("./data/services.json", (data) => {
-        data.forEach(service => { addService(service) });
+        data.forEach(service => {
+            addService(service)
+        });
         readJSON("./data/portfolio.json", (data) => {
             addPortfolio(data);
             onCompleteListener();

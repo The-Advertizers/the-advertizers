@@ -67,12 +67,10 @@
     <div id="home" class="block device-width min-h-screen bg-secondary">
 
         <!-- HEADING -->
-        <div class="container pt-16 flex flex-col mx-auto min-h-screen items-center lg:items-start justify-center">
+        <div class="container sm:pt-16 flex flex-col mx-auto min-h-screen items-center lg:items-start justify-center">
             <div class="grid lg:grid-cols-2 grid-cols-1 gap-16 place-items-center py-16">
                 <div>
-                    <p class="text-primary mx-12 text-xl sm:text-2xl xl:text-3xl font-bold lg:text-left text-center animate-slideup">Your Bussiness Needs</p>
-                    <!-- TODO: discuss -->
-                    <!-- <p class="text-secondary bg-accent mx-12 text-2xl sm:text-4xl xl:text-5xl lg:text-left text-center font-lemon font-black">Digital Marketing</p> -->
+                    <p class="text-primary mx-12 text-xl sm:text-2xl xl:text-3xl font-bold lg:text-left text-center animate-slideup">Your Business Needs</p>
                     <p class="text-accent mx-12 text-2xl sm:text-4xl xl:text-5xl lg:text-left text-center font-lemon font-black animate-slideup">Digital Marketing</p>
                     <p class="text-primary mx-12 pt-4 lg:text-left text-center animate-slideup">Lorem ipsum dolor sit amet consectetur,
                         adipisicing elit. Cum laborum sunt aliquam tempora nam, modi soluta quas cupiditate aliquid iure
@@ -134,7 +132,7 @@
 
         <!-- SCROLL DOWN -->
         <div class="w-full mb-10 absolute bottom-0 grid justify-items-center text-white sm:hidden lg:grid">
-            <svg class="animate-pulse h-8 w-8 fill-current" viewBox="0 0 970.586 970.586" xmlns="http://www.w3.org/2000/svg">
+            <svg class="animate-pulse h-16 w-16 p-4 fill-current cursor-pointer" onclick="scrollToServices()" viewBox="0 0 970.586 970.586" xmlns="http://www.w3.org/2000/svg">
                 <title>Scroll Down</title>
                 <g xmlns="http://www.w3.org/2000/svg">
                     <path d="M44.177,220.307l363.9,296.4c22.101,18,48.9,27,75.8,27c26.901,0,53.701-9,75.801-27l366.699-298.7   
@@ -154,9 +152,9 @@
         <div class="bg-header-services">
             <div class="h-auto w-full scrolling-shadow" style="backdrop-filter: blur(2px);">
                 <div class="pt-20"></div>
-                <div class="relative slide-down pt-16">
-                    <h1 class="w-full absolute top-0 bottom-0 z-0 mx-auto text-4xl sm:text-5xl text-accent font-lemon font-medium text-center scrolling-shadow-text">Our Services</h1>
-                    <h1 class="w-full absolute top-0 bottom-0 z-10 mx-auto text-4xl sm:text-5xl text-secondary font-lemon font-normal text-center">Our Services</h1>
+                <div class="relative w-full slide-down pt-16">
+                    <h1 class="absolute top-0 bottom-0 left-0 right-0 z-0 mx-auto text-4xl sm:text-5xl text-accent font-lemon font-normal text-center overflow-hidden" style="margin-top: 3px; margin-left: 3px;">Our Services</h1>
+                    <h1 class="absolute top-0 bottom-0 left-0 right-0 z-10 mx-auto text-4xl sm:text-5xl text-secondary font-lemon font-normal text-center">Our Services</h1>
                 </div>
                 <div>
                     <p class="text-center container mx-auto mt-4">We provide with our best efforts</p>
@@ -165,10 +163,10 @@
             </div>
         </div>
         <div class="container mx-auto w-full md:px-16 py-16">
-                <div id="services-grid" class="flex flex-wrap items-center justify-center"></div>
-                <!-- SERVICE ELEMENTS WILL BE LOADED HERE -->
-            </div>
+            <div id="services-grid" class="flex flex-wrap justify-center"></div>
+            <!-- SERVICE ELEMENTS WILL BE LOADED HERE -->
         </div>
+    </div>
     </div>
 
     <!-- PORTFOLIO -->
@@ -177,9 +175,9 @@
         <div class="bg-header-portfolio">
             <div class="h-auto w-full scrolling-shadow" style="backdrop-filter: blur(2px);">
                 <div class="pt-20"></div>
-                <div class="relative slide-down pt-16">
-                    <h1 class="w-full absolute top-0 bottom-0 z-0 mx-auto text-4xl sm:text-5xl text-accent font-lemon font-medium text-center scrolling-shadow-text">Portfolio</h1>
-                    <h1 class="w-full absolute top-0 bottom-0 z-10 mx-auto text-4xl sm:text-5xl text-secondary font-lemon font-normal text-center">Portfolio</h1>
+                <div class="relative w-full slide-down pt-16">
+                    <h1 class="absolute top-0 bottom-0 left-0 right-0 z-0 mx-auto text-4xl sm:text-5xl text-accent font-lemon font-normal text-center overflow-hidden" style="margin-top: 3px; margin-left: 3px;">Portfolio</h1>
+                    <h1 class="absolute top-0 bottom-0 left-0 right-0 z-10 mx-auto text-4xl sm:text-5xl text-secondary font-lemon font-normal text-center">Portfolio</h1>
                 </div>
                 <div>
                     <p class="text-center mt-4">Some of our best works to flex on :P</p>
@@ -201,14 +199,14 @@
     </div>
 
     <!-- CONTACT US -->
-    <div id="contact-us" class="relative flex flex-col device-width min-h-screen bg-secondary" style="background-image: url(./assets/img/World_map.png); height: 100%;
-    background-attachment: fixed; background-repeat: no-repeat; background-position: center bottom; background-size: cover;">
+    <div id="contact-us" class="relative flex flex-col bg-fixed device-width min-h-screen bg-secondary" style="background-image: url(./assets/img/World_map.png); height: 100%;
+    background-repeat: no-repeat; background-position: center bottom; background-size: cover;">
         <div class="pt-20"></div>
 
         <!-- Heading -->
-        <div class="relative slide-down pt-16">
-            <h1 class="w-full absolute top-0 bottom-0 z-0 mx-auto text-4xl sm:text-5xl text-accent-dark font-lemon font-medium text-center">Contact us</h1>
-            <h1 class="w-full absolute top-0 bottom-0 z-10 mx-auto text-4xl sm:text-5xl text-primary font-lemon font-normal text-center">Contact us</h1>
+        <div class="relative w-full slide-down pt-16">
+            <h1 class="absolute top-0 bottom-0 left-0 right-0 z-0 mx-auto text-4xl sm:text-5xl text-accent font-lemon font-normal text-center overflow-hidden" style="margin-top: 3px; margin-left: 3px;">Contact us</h1>
+            <h1 class="absolute top-0 bottom-0 left-0 right-0 z-10 mx-auto text-4xl sm:text-5xl text-primary font-lemon font-normal text-center">Contact us</h1>
         </div>
 
         <!-- CONTACT -->
