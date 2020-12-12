@@ -22653,6 +22653,10 @@ video {
   /* Firefox */
 }
 
+.noscroll{
+  overflow: hidden;
+}
+
 .smoothscroll {
   scroll-behavior: smooth;
 }

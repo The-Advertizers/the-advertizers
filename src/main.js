@@ -11,7 +11,8 @@ let menus = [
     document.getElementById("menu-home"),
     document.getElementById("menu-services"),
     document.getElementById("menu-contact-us"),
-    document.getElementById("menu-portfolio"),
+
+    //document.getElementById("menu-portfolio"),
 ]
 
 menus.forEach(e => {
@@ -26,7 +27,7 @@ window.addEventListener('scroll', () => {
     const home = document.getElementById("home");
     const services = document.getElementById("services");
     const contact = document.getElementById("contact-us");
-    const portfolio = document.getElementById("portfolio");
+    //const portfolio = document.getElementById("portfolio");
 
     if (isPartiallyInViewport(home)) {
         toogleActive(menus[0]);
@@ -107,10 +108,74 @@ cnbtn.addEventListener('click', (e) => {
 
 // Dynamic content
 function loadDynamicContent(onCompleteListener) {
+
+    const contactSectionElement = document.getElementById("contact-us");
+
+    function removeAnimator(elementInnerHtml){
+        elementInnerHtml = elementInnerHtml.replace(/slide-down/g, "animate-slidedown_fadein");
+        elementInnerHtml = elementInnerHtml.replace(/slide-up/g, "animate-slideup_fadein");
+        elementInnerHtml = elementInnerHtml.replace(/slide-left/g, "animate-slideleft_fadein");
+        elementInnerHtml = elementInnerHtml.replace(/slide-right/g, "animate-slideright_fadein");
+        elementInnerHtml = elementInnerHtml.replace(/fade-in/g, "animate-fadein");
+        elementInnerHtml = elementInnerHtml.replace(/opacity-0/g, "");
+        return elementInnerHtml;
+    }
+
+    function onServiceClick(service){
+        //TODO: open overlay window and show details
+        const frame = document.createElement("DIV");
+        // frame.classList = "fixed top-0 left-0 right-0 bottom-0 max-w-screen w-full min-h-screen z-50 bg-secondary overflow-y-auto overflow-x-hidden";
+        frame.classList = "fixed top-0 left-0 right-0 bottom-0 w-screen max-h-screen min-h-screen lg:min-h-0 z-50 bg-primary overflow-x-hidden overflow-y-auto";
+        // frame.style = "height: 700px;";
+        const div = document.createElement("DIV");
+        div.classList = "relative";
+
+        const nav = document.createElement("DIV");
+        nav.classList = "sticky top-0 flex items-center w-full p-8 bg-secondary h-16 top-0 left-0 right-0 ";
+        nav.style = "z-index:99;";
+        const close = document.createElement("div");
+        close.innerHTML = "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\r\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" \/>\r\n<\/svg>";
+        close.classList = "w-8 h-8 p-1 cursor-pointer text-primary hover:text-accent"
+        close.addEventListener('click', (e) => {
+            document.body.classList -= "noScrollBar noscroll";
+                document.body.removeChild(frame);
+        });
+        const logo = document.createElement("img");
+        logo.src = "./assets/img/logo-white.png";
+        logo.classList = "w-auto ml-4 h-10 justify-self-center";
+        logo.addEventListener('click', (e) => {
+            document.body.classList -= "noScrollBar noscroll";
+                document.body.removeChild(frame);
+        });
+        nav.appendChild(close);
+        nav.appendChild(logo);
+        div.appendChild(nav);
+
+        const detailsSection = document.createElement("DIV");
+        detailsSection.classList = "min-h-screen w-full";
+        div.appendChild(detailsSection);
+
+        const contactSection = document.createElement("DIV");
+        contactSection.style = "background-image: url(./assets/img/World_map.png); height: 100%;background-repeat: no-repeat; background-position: center bottom; background-size: cover;"
+        contactSection.classList = "relative flex flex-col bg-fixed device-width min-h-screen bg-secondary";
+        contactSection.innerHTML = removeAnimator(contactSectionElement.innerHTML);
+
+        div.appendChild(contactSection);
+        frame.appendChild(div);
+
+        document.body.classList = "noScrollBar noscroll";
+        document.body.appendChild(frame);
+    }
+
     function addService(service) {
         /* <div class="card flex flex-col items-center w-64 max-h-16 p-4 slide-up my-6 mx-4"> */
         const card = document.createElement("DIV");
-        card.classList = "card flex flex-col items-center w-64 max-h-16 p-4 slide-up my-6 mx-4 bg-secondary";
+        card.classList = "card "/*cursor-pointer*/ + " flex flex-col items-center max-h-16 p-4 slide-up my-6 mx-4 bg-secondary";
+        card.style = "width: 20rem";
+        // TODO: implement service on click
+        // card.addEventListener('click', (e) => {
+        //     onServiceClick(service);
+        // });
 
         // <div class="h-12 w-12 text-accent mb-4">
         const icon = document.createElement("DIV");
@@ -136,14 +201,18 @@ function loadDynamicContent(onCompleteListener) {
     }
 
     function addPortfolio(portfolio) {
-        // TODO: code
+        // TODO: add portfolio
     }
 
     function readJSON(path, callback) {
         var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (this.readyState === this.DONE) {
+                callback(JSON.parse(request.responseText));
+            }
+        }
         request.open("GET", path, false);
         request.send(null)
-        callback(JSON.parse(request.responseText));
     }
 
     function getIconElement(name) {
