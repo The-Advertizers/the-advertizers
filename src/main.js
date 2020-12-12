@@ -35,8 +35,8 @@ window.addEventListener('scroll', () => {
         toogleActive(menus[1]);
     } else if (isPartiallyInViewport(contact)) {
         toogleActive(menus[2]);
-    } else if (isPartiallyInViewport(portfolio)) {
-        toogleActive(menus[3]);
+    // } else if (isPartiallyInViewport(portfolio)) {
+    //     toogleActive(menus[3]);
     }
 });
 
