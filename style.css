@@ -1174,8 +1174,8 @@ video {
   width: auto;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-full {
@@ -1203,9 +1203,9 @@ video {
   gap: 1rem;
 }
 
-.gap-8 {
-  grid-gap: 2rem;
-  gap: 2rem;
+.gap-32 {
+  grid-gap: 8rem;
+  gap: 8rem;
 }
 
 .grid-cols-1 {
@@ -1870,10 +1870,6 @@ video {
     }
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -2001,16 +1997,16 @@ video {
     min-height: 0;
   }
 
-  .lg\:p-16 {
-    padding: 4rem;
+  .lg\:pb-0 {
+    padding-bottom: 0;
   }
 
   .lg\:text-left {
     text-align: left;
   }
 
-  .lg\:w-full {
-    width: 100%;
+  .lg\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .lg\:gap-16 {
