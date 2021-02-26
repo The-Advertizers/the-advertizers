@@ -93,6 +93,9 @@ function isPartiallyInViewport(element) {
     return rect.top < mid && rect.bottom > mid;
 }
 
+// update year text
+document.getElementById("tx-year").innerHTML = new Date().getFullYear();
+
 // contact us
 const cnbdy = document.getElementById("cu-body");
 const cnsub = document.getElementById("cu-subj");
