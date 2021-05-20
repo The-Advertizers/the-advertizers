@@ -27,8 +27,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        exclude: 
-          - tailwind.css
+        exclude: tailwind.css
         local-dir: ./src/
         server-dir: /home/dh_3x5mxu/theadvertizers.com/
         server: ${{ secrets.FTP_SERVER }}
