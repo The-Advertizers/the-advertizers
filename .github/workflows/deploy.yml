@@ -2,8 +2,9 @@ name: Publish Website
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   FTP-Deploy-Action:
@@ -13,10 +14,12 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
 
-    - name: 🔨 Build Project
+    - name: Use Node.js 12
       uses: actions/setup-node@v2
       with:
         node-version: '14'
+
+    - name: 🔨 Build Project
       run: |
         npm install
         npm run build-prod
