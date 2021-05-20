@@ -1,24 +1,32 @@
-name: GPagesDeploy
+name: Publish Website
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-    
+    branches:
+      - master
+
 jobs:
-  build-and-deploy:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
-      
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: src
-          CLEAN: true
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+
+    - name: 🔨 Build Project
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+      run: |
+        npm install
+        npm run build-prod
+
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        protocol: ftps
+        local-dir: ./src/
+        server-dir: /home/dh_3x5mxu/theadvertizers.com/
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
