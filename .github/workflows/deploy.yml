@@ -29,7 +29,7 @@ jobs:
       with:
         exclude: tailwind.css
         local-dir: ./src/
-        server-dir: /home/dh_3x5mxu/theadvertizers.com/
+        server-dir: ./theadvertizers.com/
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
