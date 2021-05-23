@@ -1868,6 +1868,10 @@ video {
     }
   }
 
+  .sm\:bg-transparent {
+    background-color: transparent;
+  }
+
   .sm\:rounded-lg {
     border-radius: 0.5rem;
   }
