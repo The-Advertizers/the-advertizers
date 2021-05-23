@@ -77,7 +77,7 @@
     <div id="quotation" class="relative device-width min-h-screen flex flex-col items-center justify-center bg-black sm:bg-transparent">
         <div class="fixed w-full h-screen top-0 left-0 overflow-hidden"
             style=" z-index: -1; filter: blur(4px); opacity: 0.3;">
-            <img src="./bg.png" class="w-full h-full object-cover object-center">
+            <img src="../assets/bg.png" class="w-full h-full object-cover object-center">
         </div>
 
         <div class="container mx-auto py-16 flex flex-col items-center h-full z-20">
@@ -92,7 +92,7 @@
                                 <span class="text-accent">great work</span> together.</h1>
                         </div>
 
-                        <form class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                        <form id="quote-form" class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                             <div>
                                 <label for="name" class="text-primary">Name</label>
                                 <input id="name" name="Name" class="form-input" required>
@@ -115,7 +115,15 @@
                             </div>
                             <div>
                                 <label for="services" class="text-primary">Service</label>
-                                <select id="services" name="Service" class="form-input"></select>
+                                <select id="services" name="Service" class="form-input">
+                                    <!-- <option>Social Media Marketing</option>
+                                    <option>Search Engine Marketing</option>
+                                    <option>Content Writing</option>
+                                    <option>Video Advertisement</option>
+                                    <option>Graphic Design</option>
+                                    <option>Web Development</option>
+                                    <option>Product Photography</option> -->
+                                </select>
                             </div>
                             <div class="sm:col-span-2">
                                 <label for="comments" class="text-primary">Comments</label>

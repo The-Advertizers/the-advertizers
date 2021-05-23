@@ -1,3 +1,5 @@
+var qform;
+
 // preloader
 window.onload = function () {
     initiateAnimator();
@@ -14,7 +16,36 @@ window.onload = function () {
             }
         }
     );
+
+    qform = document.getElementById('quote-form');
+    if (qform.attachEvent) {
+        qform.attachEvent("submit", processForm);
+    } else {
+        qform.addEventListener("submit", processForm);
+    }
 }
+
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
+
+    // TODO: send data to backend service
+    console.log(getFormJSON(qform));
+
+    // You must return false to prevent the default form behavior
+    return false;
+}
+
+const getFormJSON = (form) => {
+    const data = new FormData(form);
+    return Array.from(data.keys()).reduce((result, key) => {
+      if (result[key]) {
+        result[key] = data.getAll(key)
+        return result
+      }
+      result[key] = data.get(key);
+      return result;
+    }, {});
+  };
 
 function scrollToQuotation() {
     var quote = document.getElementById('quotation');

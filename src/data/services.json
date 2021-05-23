@@ -22,5 +22,13 @@
         "title": "Graphic Design",
         "desc": "Designs eye-catching as they could possibly be. With the help of our highly capable Graphic designers, we create your content in such a way that it gets more interaction and clicks! Making our clients grow happy.",
         "icon": "computer.svg"
+    }, {
+        "title": "Product Photography",
+        "desc": "Having the equipment, expertise and the lighting, we can accurately and attractively represent your products. With experienced workers to keep the workflow running we increase conversions by enticing shoppers to purchase your product.",
+        "icon": "camera.svg"
+    }, {
+        "title": "Web Development",
+        "desc": "Makes your brand digitally approachable with us working in the backstage to make a website have a seem-less experience. We specialize in creating and developing websites for all sorts for our clients.",
+        "icon": "web.svg"
     }
 ]
