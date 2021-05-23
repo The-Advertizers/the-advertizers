@@ -28,8 +28,28 @@ window.onload = function () {
 function processForm(e) {
     if (e.preventDefault) e.preventDefault();
 
-    // TODO: send data to backend service
-    console.log(getFormJSON(qform));
+    fetch('../post_form.php', {
+        method: 'POST',
+        body: JSON.stringify({
+            data: getFormJSON(qform)
+        })
+    }).then(res => {
+        if(res.ok){
+            var conf = document.getElementById('confirmation');
+            var confd = document.getElementById('confirmation-dialog');
+            confd.classList.add('animate-slidedown_fadein');
+            conf.classList.remove('hidden');
+            var time = 3000;
+            setTimeout(() => {
+                conf.classList.add('animate-fadeout');
+                setTimeout(() => {
+                    conf.classList.add('hidden');
+                    conf.classList.remove('animate-fadeout');
+                    confd.classList.remove('animate-slidedown_fadein');
+                }, 1000);
+            }, time);
+        }
+    });
 
     // You must return false to prevent the default form behavior
     return false;
@@ -61,8 +81,11 @@ function fadeOut(element, timeout) {
             element.style.opacity -= 0.1;
         } else {
             clearInterval(fadeEffect);
-            document.getElementById("preloader").remove();
-            document.getElementsByTagName('html')[0].classList += "smoothscroll";
+            var pre = document.getElementById("preloader");
+            if(pre){
+                pre.remove();
+            }
+            document.getElementsByTagName('html')[0].classList.add("smoothscroll");
         }
     }, timeout);
 }
