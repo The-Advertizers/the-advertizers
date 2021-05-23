@@ -3,7 +3,7 @@
 $req = json_decode(file_get_contents('php://input'), true);
 
 if(!isset($req['data'])){
-    header('fail', true, 400);
+    header('status: 400', true, 400);
     die();
 }
 
@@ -67,10 +67,8 @@ $header .= "Content-Type: text/html; charset=UTF-8\r\n";
 $header .= "Bcc: sayyam@theadvertizers.com,\r\n";
 
 if (mail("info@theadvertizers.com", "Quotation Form Entry", $message, $header)) {
-    header('success' , true, 200);
-    die();
+    header('status: 200' , true, 200);
 } else {
-    header('fail', true, 500);
-    die();
+    header('status: 500', true, 500);
 }
 ?>
