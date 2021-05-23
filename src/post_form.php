@@ -54,12 +54,12 @@ $message = "
     <link href=\"https://fonts.googleapis.com/css2?family=Quicksand&display=swap\" rel=\"stylesheet\">
 </head>
 <body>
-    " . jsonToTable($_POST['data']) . "
+    " . jsonToTable(json_decode($_POST['data'])) . "
 </body>
 </html>";
 
 $header = "From: website@theadvertizers.com\r\n";
-// $header .= "X-Mailer: php\r\n";
+$header .= "X-Mailer: php\r\n";
 $header .= "MIME-Version: 1.0\r\n";
 $header .= "Content-Type: text/html; charset=UTF-8\r\n";
 $header .= "Bcc: sayyam@theadvertizers.com,\r\n";
@@ -71,4 +71,3 @@ if (mail("info@theadvertizers.com", "Quotation Form Entry", $message, $header)) 
     header('fail', true, 500);
     die();
 }
-?>
