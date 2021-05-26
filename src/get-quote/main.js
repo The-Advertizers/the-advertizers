@@ -39,7 +39,6 @@ function processForm(e) {
             var confd = document.getElementById('confirmation-dialog');
             confd.classList.add('animate-slidedown_fadein');
             conf.classList.remove('hidden');
-            var time = 3000;
             setTimeout(() => {
                 conf.classList.add('animate-fadeout');
                 setTimeout(() => {
@@ -47,7 +46,8 @@ function processForm(e) {
                     conf.classList.remove('animate-fadeout');
                     confd.classList.remove('animate-slidedown_fadein');
                 }, 1000);
-            }, time);
+            }, 3000);
+            fbq('track', 'Lead');
         }
     });
 

@@ -12,6 +12,26 @@
     <noscript>
         <link rel="stylesheet" href="style.css">
     </noscript>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1263410857416354');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1263410857416354&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -253,9 +273,11 @@
     <div class="bg-black">
         <div class="container mx-auto flex flex-col items-center justify-center h-full" style="min-height: 300px;">
             <div>
-                <h1 class="text-primary px-2 text-xl sm:text-2xl md:text-4xl font-medium sm:font-bold mb-8">All these services, just few clicks away</h1>
+                <h1 class="text-primary px-2 text-xl sm:text-2xl md:text-4xl font-medium sm:font-bold mb-8">All these
+                    services, just few clicks away</h1>
             </div>
-            <a href="./get-quote" class="bg-accent hover:bg-accent-lighter font-semibold py-2 px-4 rounded-md">Request a Quotataion</a>
+            <a href="./get-quote" class="bg-accent hover:bg-accent-lighter font-semibold py-2 px-4 rounded-md">Request a
+                Quotataion</a>
         </div>
     </div>
 
@@ -373,7 +395,8 @@
         <!-- FOOTER -->
         <div class="absolute bottom-0 flex w-full px-4 py-3 flex-wrap overflow-hidden">
             <h6 class="text-primary text-right w-full slide-up menu font-light">
-                <a class="text-accent font-lemon font-normal" href="#home">The Advertizers</a> © <span id="tx-year"></span> All Rights
+                <a class="text-accent font-lemon font-normal" href="#home">The Advertizers</a> © <span
+                    id="tx-year"></span> All Rights
                 Reserved
             </h6>
             <!-- <h6 class="text-primary ml-8 text-right flex-grow slide-left menu font-hairline">
