@@ -48,6 +48,7 @@ function processForm(e) {
                 }, 1000);
             }, 3000);
             fbq('track', 'Lead');
+            gtag_report_conversion();
         }
     });
 
