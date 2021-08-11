@@ -42,6 +42,20 @@
 
       gtag('config', 'UA-204671753-1');
     </script>
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-476712816/uXrCCOfh9OYCEPCeqOMB',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
 </head>
 
 <body>
