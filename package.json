@@ -1,28 +1,21 @@
 {
-  "name": "the-advertizers",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "private": true,
   "scripts": {
-    "build": "postcss src/tailwind.css -o src/style.css",
-    "build-prod": "export NODE_ENV=production && postcss src/tailwind.css -o src/style.css",
-    "serve": "live-server src"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ameerhmzx/the-advertizers.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ameerhmzx/the-advertizers/issues"
-  },
-  "homepage": "https://github.com/ameerhmzx/the-advertizers#readme",
   "dependencies": {
-    "autoprefixer": "^10.0.1",
-    "live-server": "^1.2.1",
-    "postcss": "^8.1.2",
-    "postcss-cli": "^8.1.0",
-    "tailwindcss": "^1.9.4"
+    "@headlessui/react": "^1.4.2",
+    "next": "latest",
+    "next-fonts": "^1.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
   }
 }
