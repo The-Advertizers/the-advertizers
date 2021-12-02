@@ -1,3 +1,5 @@
+import services from '../../data/services';
+
 export default function GetQuoteSection({ setConfirmation }) {
     return (
         <>
@@ -45,15 +47,7 @@ export default function GetQuoteSection({ setConfirmation }) {
                                     <div>
                                         <label for="services" className="text-primary">Service</label>
                                         <select id="services" name="Service" className="form-input">
-                                            {[
-                                                "Social Media Marketing",
-                                                "Search Engine Marketing",
-                                                "Content Writing",
-                                                "Video Advertisement",
-                                                "Graphic Design",
-                                                "Web Development",
-                                                "Product Photography"
-                                            ].map((value, i) => <option>{value}</option>)}
+                                            {services.map((service, i) => <option>{service.title}</option>)}
                                         </select>
                                     </div>
                                     <div className="sm:col-span-2">
