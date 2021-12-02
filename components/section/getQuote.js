@@ -1,4 +1,4 @@
-export default function GetQuoteSection() {
+export default function GetQuoteSection({ setConfirmation }) {
     return (
         <>
             <div id="quotation"
@@ -21,22 +21,22 @@ export default function GetQuoteSection() {
                                     </h1>
                                 </div>
 
-                                <form id="quote-form" className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                                <form onSubmit={(e) => e.preventDefault()} className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                                     <div>
                                         <label for="name" className="text-primary">Name</label>
-                                        <input id="name" name="Name" className="form-input" required />
+                                        <input id="name" name="Name" className="form-input" />
                                     </div>
                                     <div>
                                         <label for="email" className="text-primary">Email</label>
-                                        <input id="email" name="Email" type="email" className="form-input" required />
+                                        <input id="email" name="Email" type="email" className="form-input" />
                                     </div>
                                     <div>
                                         <label for="tel" className="text-primary">Phone Number</label>
-                                        <input id="tel" name="Phone" type="tel" className="form-input" required />
+                                        <input id="tel" name="Phone" type="tel" className="form-input" />
                                     </div>
                                     <div>
                                         <label for="comp-name" className="text-primary">Company Name</label>
-                                        <input id="comp-name" name="Company Name" className="form-input" required />
+                                        <input id="comp-name" name="Company Name" className="form-input" />
                                     </div>
                                     <div>
                                         <label for="comp-website" className="text-primary">Company website</label>
@@ -45,21 +45,22 @@ export default function GetQuoteSection() {
                                     <div>
                                         <label for="services" className="text-primary">Service</label>
                                         <select id="services" name="Service" className="form-input">
-                                            {/* TODO: generated in js */}
-                                            {/* <option>Social Media Marketing</option>
-                                    <option>Search Engine Marketing</option>
-                                    <option>Content Writing</option>
-                                    <option>Video Advertisement</option>
-                                    <option>Graphic Design</option>
-                                    <option>Web Development</option>
-                                    <option>Product Photography</option> */}
+                                            {[
+                                                "Social Media Marketing",
+                                                "Search Engine Marketing",
+                                                "Content Writing",
+                                                "Video Advertisement",
+                                                "Graphic Design",
+                                                "Web Development",
+                                                "Product Photography"
+                                            ].map((value, i) => <option>{value}</option>)}
                                         </select>
                                     </div>
                                     <div className="sm:col-span-2">
                                         <label for="comments" className="text-primary">Comments</label>
                                         <textarea id="comments" name="Comments" className="form-input"></textarea>
                                     </div>
-                                    <button type="submit"
+                                    <button type="submit" onClick={() => setConfirmation(true)}
                                         className="button-accent px-16 mt-4 self-end sm:col-span-2">Submit</button>
                                 </form>
                             </div>

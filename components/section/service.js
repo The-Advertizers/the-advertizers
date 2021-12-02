@@ -1,3 +1,22 @@
+import services from '../../data/services';
+import DynamicHeroIcon from '../../lib/dynamicHeroIcon/dynamic_hero_icon';
+
+function Service({ title, desc, icon, iconType }, i) {
+    return (
+        <div key={i} className="card flex flex-col items-center p-4 slide-up my-6 mx-4 bg-secondary animate-slideup_fadein w-80">
+            <div className="h-12 w-12 text-accent mb-4">
+                <DynamicHeroIcon className="stroke-1" icon={icon} outline={iconType === 'outline'} />
+            </div>
+            <h6 className="text-primary font-semibold text-lg text-center mb-4">
+                {title}
+            </h6>
+            <p className="text-primary overflow-hidden">
+                {desc}
+            </p>
+        </div>
+    );
+}
+
 export default function ServiceSection() {
     return (
         <>
@@ -20,8 +39,9 @@ export default function ServiceSection() {
                     </div>
                 </div>
                 <div className="container mx-auto w-full md:px-16 py-16">
-                    <div id="services-grid" className="flex flex-wrap justify-center"></div>
-                    {/* SERVICE ELEMENTS WILL BE LOADED HERE */}
+                    <div className="flex flex-wrap justify-center">
+                        {services.map(Service)}
+                    </div>
                 </div>
             </div>
         </>
