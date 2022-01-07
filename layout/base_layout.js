@@ -1,38 +1,38 @@
 import Head from "next/head";
 
-export default function BaseLayout({ children }) {
+export default function BaseLayout({children}) {
     return (
         <>
             <Head>
                 <title>The Advertizers</title>
-                <link rel="icon" href={'/img/mini.png'} type="image/png" />
+                <link rel="icon" href={'/img/mini.png'} type="image/png"/>
 
                 {/* PRELOAD FONTS */}
 
                 <link
                     rel="preload"
-                    href="/fonts/Lemon-Light.otf"
+                    href={"/fonts/Lemon-Light.otf"}
                     as="font"
                     crossOrigin=""
                 />
 
                 <link
                     rel="preload"
-                    href="/fonts/Lemon.otf"
+                    href={"/fonts/Lemon.otf"}
                     as="font"
                     crossOrigin=""
                 />
 
                 <link
                     rel="preload"
-                    href="/fonts/Lemon-Mid.otf"
+                    href={"/fonts/Lemon-Mid.otf"}
                     as="font"
                     crossOrigin=""
                 />
 
                 <link
                     rel="preload"
-                    href="/fonts/Lemon-Bold.otf"
+                    href={"/fonts/Lemon-Bold.otf"}
                     as="font"
                     crossOrigin=""
                 />

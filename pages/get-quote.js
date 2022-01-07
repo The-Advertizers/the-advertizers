@@ -1,13 +1,13 @@
 import ContactUsSection from "../components/section/contactus";
 import GetQuoteSection from "../components/section/getQuote";
 import Squares from "../components/squares";
-import { ChevronDoubleDownIcon } from '@heroicons/react/solid';
+import FooterNote from "../components/footerNote";
+import {ChevronDoubleDownIcon} from '@heroicons/react/solid';
 
-import { useState, Fragment } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
+import {useState, Fragment, useRef} from 'react'
+import {Dialog, Transition} from '@headlessui/react'
 
-function ConfirmationDialog({ isConfirmed, setConfirmation }) {
-
+function ConfirmationDialog({isConfirmed, setConfirmation}) {
     return (
         <>
             <Transition appear show={isConfirmed} as={Fragment}>
@@ -24,7 +24,8 @@ function ConfirmationDialog({ isConfirmed, setConfirmation }) {
                             leave="ease-in duration-200"
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0">
-                            <Dialog.Overlay className="fixed inset-0 backdrop-filter backdrop-blur-sm bg-opacity-40 bg-black" />
+                            <Dialog.Overlay
+                                className="fixed inset-0 backdrop-filter backdrop-blur-sm bg-opacity-40 bg-black"/>
                         </Transition.Child>
 
                         {/* This element is to trick the browser into centering the modal contents. */}
@@ -42,7 +43,8 @@ function ConfirmationDialog({ isConfirmed, setConfirmation }) {
                             leave="ease-in duration-200"
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95">
-                            <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white border shadow-xl rounded-md">
+                            <div
+                                className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white border shadow-xl rounded-md">
 
                                 <Dialog.Title
                                     as="h3"
@@ -77,6 +79,7 @@ function ConfirmationDialog({ isConfirmed, setConfirmation }) {
 
 export default function GetQuotePage() {
     let [isConfirmed, setConfirmation] = useState(false);
+    const quotationForm = useRef();
 
     return (
         <>
@@ -97,15 +100,18 @@ export default function GetQuotePage() {
 
                 {/* SCROLL DOWN */}
                 <div className="w-full mb-4 absolute z-40 bottom-0 grid justify-items-center text-white lg:grid">
-                    <ChevronDoubleDownIcon onClick={"//TODO: handle click"} className="animate-pulse h-16 w-16 p-4 fill-current cursor-pointer" />
+                    <ChevronDoubleDownIcon onClick={() => quotationForm.current.scrollIntoView()}
+                                           className="animate-pulse h-16 w-16 p-4 fill-current cursor-pointer"/>
                 </div>
 
-                <Squares />
+                <Squares/>
             </div>
 
-            <GetQuoteSection setConfirmation={setConfirmation} />
-            <ContactUsSection />
-            <ConfirmationDialog isConfirmed={isConfirmed} setConfirmation={setConfirmation} />
+            <GetQuoteSection reference={quotationForm} setConfirmation={setConfirmation}/>
+            <ContactUsSection/>
+            <FooterNote/>
+
+            <ConfirmationDialog isConfirmed={isConfirmed} setConfirmation={setConfirmation}/>
         </>
     );
 }

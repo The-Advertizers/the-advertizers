@@ -9,7 +9,7 @@ Make sure npm is installed.
 
 ```bash
 npm install
-npm run serve
+npm run dev
 ```
 
 > for further scripts consult `package.json`
